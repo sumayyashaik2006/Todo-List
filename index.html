@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Todo List</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="sidebar">
+<h2>Todo List</h2>
+<ul>
+<li onclick="clearAll()">Clear All</li>
+</ul>
+</div>
+
+<div class="main">
+
+<header>
+<h2>Project Dashboard</h2>
+<input id="search" placeholder="Search tasks">
+</header>
+
+<div class="analytics">
+
+<div class="card">
+<h3 id="totalTasks">0</h3>
+<p>Total</p>
+</div>
+
+<div class="card">
+<h3 id="completedTasks">0</h3>
+<p>Completed</p>
+</div>
+
+<div class="card">
+<h3 id="pendingTasks">0</h3>
+<p>Pending</p>
+<div class="progress-bar">
+<div class="progress" id="progressBar"></div>
+</div>
+</div>
+
+</div>
+
+<div class="task-form">
+
+<input id="title" placeholder="Task title">
+<input id="assignee" placeholder="Assigned to">
+<input type="date" id="dueDate">
+
+<select id="priority">
+<option value="low">Low</option>
+<option value="medium">Medium</option>
+<option value="high">High</option>
+</select>
+
+<button onclick="addTask()">Add Task</button>
+
+</div>
+
+<div class="board">
+
+<div class="column">
+<h3>Todo</h3>
+<div id="todo"></div>
+</div>
+
+<div class="column">
+<h3>In Progress</h3>
+<div id="progress"></div>
+</div>
+
+<div class="column">
+<h3>Done</h3>
+<div id="done"></div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
